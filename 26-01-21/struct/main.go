@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 type User struct {
-	Name string //名字
-	Age  int    //年龄
+	Name string
+	Age  int
 }
 
 func main() {
