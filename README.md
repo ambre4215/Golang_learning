@@ -47,9 +47,15 @@
 - 普通函数： `func IsAdult(u User) bool` -> 这是一个公共工具，谁都能用。  
 方法： `func (u User) IsAdult() bool` -> 这是 User 独有的技能。
 
-### 学习使用指针修改数组中真实数据
+### 学习使用指针修改数组中真实数据(pointer)
 
 - 使用指针才能修改数组中的真实数据  
 `func (u *User) HappyBirthday() {
 	u.Age = u.Age + 1
 }`
+
+### 一次基础语法测试(junior_test)
+
+- 使用切片，指针，循环，判断逻辑，方法函数进行能力测试
+
+### 学习接口（interface）的使用方法和原理
