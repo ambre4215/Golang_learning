@@ -46,3 +46,10 @@
 - 使用方法给(struct) 加判断逻辑
 - 普通函数： `func IsAdult(u User) bool` -> 这是一个公共工具，谁都能用。  
 方法： `func (u User) IsAdult() bool` -> 这是 User 独有的技能。
+
+### 学习使用指针修改数组中真实数据
+
+- 使用指针才能修改数组中的真实数据  
+`func (u *User) HappyBirthday() {
+	u.Age = u.Age + 1
+}`
