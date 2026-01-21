@@ -30,3 +30,9 @@
 ### 显式转换(explicit_conversion.go)
 
 - 两个类型名称不完全一致的场景，必须要**显式类型转换**。
+
+## 26-1-21
+
+### 学习slice和map概念
+
+- `if` `countinue` 的运用
