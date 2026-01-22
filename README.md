@@ -59,3 +59,11 @@
 - 使用切片，指针，循环，判断逻辑，方法函数进行能力测试
 
 ### 学习接口（interface）的使用方法和原理
+
+- 初步理解interface的概念，明天需要复习
+
+## 26-01-22
+
+### 复习interface和map(map&interface)
+
+- 利用interface和map编写一段简单的代码
