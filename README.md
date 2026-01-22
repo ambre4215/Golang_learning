@@ -72,3 +72,19 @@
 
 - 结合之前学习的知识搭建一个电子银行ATM程序
 - for循环外可以添加lable标签方便跳出
+
+### 学习文件读写操作
+
+- 升级上一个电子银行程序拥有存储数据和读取数据的功能。
+- 数据的序列化和反序列化  
+- `jsonData, err := json.MarshalIndent(data, "", "    ")`  
+- `err = json.Unmarshal(fileData, &data)`  
+- 文件写入和文件读取
+- `0644`为权限等级  
+- 第一位 0：特殊位。在绝大多数 Go 开发场景中，第一位固定为 0。它代表特殊权限（如 SetUID），普通开发者几乎用不到。
+- 后三位 644：核心权限。这三位分别代表三个不同的用户身份 
+1. (6)：文件所有者 (Owner) —— 就是运行 Go 程序的你。
+2. (4)：同组用户 (Group) —— 和你在同一个用户组的人。
+3. (4)：其他人 (Others) —— 系统里的任何陌生人。  
+- `os.WriteFile(DataFileName, jsonData, 0644)`  
+- `os.ReadFile(DataFileName)`
