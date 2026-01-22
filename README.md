@@ -64,6 +64,11 @@
 
 ## 26-01-22
 
-### 复习interface和map(map&interface)
+### 复习interface和map(map&interface_payment)
 
 - 利用interface和map编写一段简单的代码
+
+### 学习错误处理机制(error_bank_system)
+
+- 结合之前学习的知识搭建一个电子银行ATM程序
+- for循环外可以添加lable标签方便跳出
