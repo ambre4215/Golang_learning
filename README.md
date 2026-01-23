@@ -77,6 +77,7 @@
 
 - 升级上一个电子银行程序拥有存储数据和读取数据的功能。
 - 数据的序列化和反序列化  
+- `encoding/json`
 - `jsonData, err := json.MarshalIndent(data, "", "    ")`  
 - `err = json.Unmarshal(fileData, &data)`  
 - 文件写入和文件读取
@@ -86,5 +87,12 @@
 1. (6)：文件所有者 (Owner) —— 就是运行 Go 程序的你。
 2. (4)：同组用户 (Group) —— 和你在同一个用户组的人。
 3. (4)：其他人 (Others) —— 系统里的任何陌生人。  
+- 使用os读写文件
 - `os.WriteFile(DataFileName, jsonData, 0644)`  
 - `os.ReadFile(DataFileName)`
+
+## 26-01-23
+
+### 学习switch，分包(switch_defer_packages)
+
+- 使用分包，switch重构电子银行程序
