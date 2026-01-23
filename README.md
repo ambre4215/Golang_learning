@@ -95,4 +95,5 @@
 
 ### 学习switch，分包(switch_defer_packages)
 
-- 使用分包，switch重构电子银行程序
+- 使用分包，switch重构电子银行程序 
+- 构建go项目`go mod init <项目名>
