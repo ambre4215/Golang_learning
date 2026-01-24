@@ -2,7 +2,7 @@ package library
 
 type Book struct {
 	Title  string
-	Auther string
+	Author string
 	Stock  int
 	Total  int
 }
