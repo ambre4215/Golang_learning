@@ -20,7 +20,7 @@ func main() {
 		{ID: 6, Amount: 41.9, Type: model.Expense, Category: "娱乐", Description: "游戏充值", Time: time},
 	}
 	service.AddRecord(Ledger...)
-	Formatter := &report.CSVFormatter{}
+	Formatter := &report.TextFormatter{}
 	content, err := Formatter.Format(service.Records)
 	if err != nil {
 		fmt.Printf("格式化失败[%v]\n", err)

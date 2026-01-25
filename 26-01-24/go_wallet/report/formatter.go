@@ -19,9 +19,9 @@ func (t *TextFormatter) Format(records []*model.Record) (string, error) {
 	var textOut string
 	for _, r := range records {
 		if r.Type == model.Income {
-			textOut += fmt.Sprintf("%v. [%v] %v (+%v)\n==========================\n", r.ID, r.Category, r.Description, r.Amount)
+			textOut += fmt.Sprintf("%v. [%v] %v (+%v)\n", r.ID, r.Category, r.Description, r.Amount)
 		} else {
-			textOut += fmt.Sprintf("%v. [%v] %v (-%v)\n==========================\n", r.ID, r.Category, r.Description, r.Amount)
+			textOut += fmt.Sprintf("%v. [%v] %v (-%v)\n", r.ID, r.Category, r.Description, r.Amount)
 		}
 	}
 	return textOut, nil
