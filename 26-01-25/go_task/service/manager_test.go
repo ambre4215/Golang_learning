@@ -61,3 +61,41 @@ func TestList(t *testing.T) {
 	}
 	fmt.Println(list)
 }
+
+func TestComplete(t *testing.T) {
+	manager := &TaskManager{
+		Task: []*model.Task{
+			{
+				ID:       1,
+				Title:    "学习 Go 语言指针",
+				Done:     true,
+				CreateAt: time.Now().Add(-48 * time.Hour), // 两天前
+				Priority: model.High,
+			},
+			{
+				ID:       2,
+				Title:    "编写 TaskManager 单元测试",
+				Done:     false,
+				CreateAt: time.Now().Add(-24 * time.Hour), // 昨天
+				Priority: model.High,
+			},
+			{
+				ID:       3,
+				Title:    "买咖啡豆",
+				Done:     false,
+				CreateAt: time.Now().Add(-1 * time.Hour), // 一小时前
+				Priority: model.Low,
+			},
+			{
+				ID:       4,
+				Title:    "整理 GitHub 仓库",
+				Done:     false,
+				CreateAt: time.Now(),
+				Priority: model.Middle,
+			}},
+	}
+	err := manager.Complete(4)
+	if err != nil {
+		t.Errorf("完成任务出错%v", err)
+	}
+}

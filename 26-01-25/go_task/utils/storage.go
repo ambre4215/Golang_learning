@@ -13,7 +13,7 @@ const FileName = "task_data.json"
 func LoadFile() ([]*model.Task, error) {
 	file, err := os.OpenFile(FileName, os.O_RDONLY|os.O_CREATE, 0644)
 	if err != nil {
-		return nil, errors.New("文件打开失败")
+		return []*model.Task{}, errors.New("文件打开失败")
 	}
 	bytes, err := io.ReadAll(file)
 	if err != nil {
@@ -37,5 +37,8 @@ func SavaFile(data []*model.Task) error {
 		return errors.New("数据序列化失败")
 	}
 	err = os.WriteFile(FileName, jsonData, 0644)
+	if err != nil {
+		return errors.New("数据保存失败")
+	}
 	return nil
 }

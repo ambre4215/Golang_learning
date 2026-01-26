@@ -23,13 +23,14 @@ func (p personSlice) Less(i, j int) bool {
 	if p[i].Priority != p[j].Priority {
 		return p[i].Priority < p[j].Priority
 	} else {
-		return p[i].CreateAt.Before(p[j].CreateAt)
+		return p[i].CreateAt.After(p[j].CreateAt)
 	}
 }
 
 func (p personSlice) Swap(i, j int) {
 	p[i], p[j] = p[j], p[i]
 }
+
 func (t *TaskManager) MaxId() int {
 	maxID := 0
 	for _, item := range t.Task {
@@ -78,4 +79,16 @@ func (t *TaskManager) List() (string, error) {
 		builder.WriteString(line)
 	}
 	return builder.String(), nil
+}
+
+func (t *TaskManager) Complete(id int) error {
+	for _, i := range t.Task {
+		if i.ID == id {
+			if i.Done == true {
+				return errors.New("任务已经是完成状态了")
+			}
+			i.Done = true
+		}
+	}
+	return nil
 }
