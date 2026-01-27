@@ -3,8 +3,8 @@ package model
 import "time"
 
 type Inventory struct {
-	coffeBean int
-	milk      int
+	CoffeeoffeBean int
+	Milk           int
 }
 
 type Drink string
@@ -14,12 +14,12 @@ const (
 	Latte  Drink = "latte"
 )
 
-type Statu string
+type Statu int
 
 const (
-	Pending   Statu = "pending"
-	Making    Statu = "making"
-	Complated Statu = "complated"
+	Pending Statu = iota
+	Making
+	Complated
 )
 
 type Order struct {
